@@ -1,5 +1,5 @@
 #include "WorldTest.h"
-#include "World.h"
+#include "../World.h"
 
 
 CPPUNIT_TEST_SUITE_REGISTRATION(WorldTest);
