@@ -1,0 +1,3 @@
+#ignore NetBeans generated files after compiling/building
+/build
+/dist
