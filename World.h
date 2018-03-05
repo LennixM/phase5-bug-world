@@ -1,7 +1,6 @@
-/*
- * File:   World.h
- *
-*/
+/* 
+ * File: World.h
+ */
 
 #ifndef WORLD_H
 #define WORLD_H

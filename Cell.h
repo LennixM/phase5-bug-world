@@ -18,6 +18,7 @@ private:
     bool homeBlackBug;
     bool homeRedBug;
 public:
+    Cell();
     Cell(char symb);
     ~Cell();
     Bug getOccupant();
