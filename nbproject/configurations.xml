@@ -18,6 +18,7 @@
       <itemPath>Instruction_turn.h</itemPath>
       <itemPath>Instruction_unmark.h</itemPath>
       <itemPath>Marker.h</itemPath>
+      <itemPath>Program.h</itemPath>
       <itemPath>Structs.h</itemPath>
       <itemPath>World.h</itemPath>
     </logicalFolder>
@@ -31,6 +32,7 @@
       <itemPath>Bug.cpp</itemPath>
       <itemPath>Cell.cpp</itemPath>
       <itemPath>Marker.cpp</itemPath>
+      <itemPath>Program.cpp</itemPath>
       <itemPath>World.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -111,6 +113,10 @@
       <item path="Marker.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Marker.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Program.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Program.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Structs.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -232,6 +238,10 @@
       <item path="Marker.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Marker.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Program.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Program.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Structs.h" ex="false" tool="3" flavor2="0">
       </item>

@@ -7,11 +7,11 @@
 World::World(){}
 
 void World::load(std::string filename){
-  //To be implemented
+    /* TODO: to be implemented. */
 }
 
 void World::executeCycle(){
-  //To be implemented
+    /* TODO: to be implemented. */
 }
 
 Cell World::getCell(tposition pos){

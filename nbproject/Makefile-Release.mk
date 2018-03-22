@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Bug.o \
 	${OBJECTDIR}/Cell.o \
 	${OBJECTDIR}/Marker.o \
+	${OBJECTDIR}/Program.o \
 	${OBJECTDIR}/World.o \
 	${OBJECTDIR}/main.o
 
@@ -94,6 +95,11 @@ ${OBJECTDIR}/Marker.o: Marker.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Marker.o Marker.cpp
+
+${OBJECTDIR}/Program.o: Program.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Program.o Program.cpp
 
 ${OBJECTDIR}/World.o: World.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -182,6 +188,19 @@ ${OBJECTDIR}/Marker_nomain.o: ${OBJECTDIR}/Marker.o Marker.cpp
 	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Marker_nomain.o Marker.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Marker.o ${OBJECTDIR}/Marker_nomain.o;\
+	fi
+
+${OBJECTDIR}/Program_nomain.o: ${OBJECTDIR}/Program.o Program.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/Program.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Program_nomain.o Program.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/Program.o ${OBJECTDIR}/Program_nomain.o;\
 	fi
 
 ${OBJECTDIR}/World_nomain.o: ${OBJECTDIR}/World.o World.cpp 
