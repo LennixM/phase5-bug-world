@@ -1,5 +1,5 @@
 /* 
- * File:   Cell.cpp
+ * File: Cell.cpp
  */
 
 #include "Cell.h"
@@ -8,37 +8,42 @@
 
 using namespace std;
 
-Cell::Cell(char symb){
+Cell::Cell()
+{
+}
+
+Cell::~Cell()
+{
+}
+
+Cell::Cell(char symb)
+{
+    /*
+     * We don't yet initialize the occupant.
+     * The marker is not yet implemented -> not initialized either.
+     */
     switch(symb){
         case '#': 
-            //occupant not initialized
             obstructed = true;
             food = 0;
-            //marker to be implemented
             homeBlackBug = false;
             homeRedBug = false;
             break;
         case '.':
-            //occupant not initialized
             obstructed = false;
             food = 0;
-            //marker to be implemented
             homeBlackBug = false;
             homeRedBug = false;
             break;
         case '-':
-            //Add code to initialize Bug
             homeBlackBug = true;
             homeRedBug = false;
-            //marker to be implemented
             food = 0;
             obstructed = false;
             break;
         case '+':
-            //Add code to initialize Bug
             obstructed = false;
             food = 0;
-            //marker to be implemented
             homeBlackBug = false;
             homeRedBug = true;
             break;
@@ -51,10 +56,8 @@ Cell::Cell(char symb){
         case '7':
         case '8':
         case '9':
-            //occupant not initialized
             obstructed = false;
             food = symb - 48;
-            //marker to be implemented
             homeBlackBug = false;
             homeRedBug = false;
             break;
@@ -64,26 +67,37 @@ Cell::Cell(char symb){
     }
 }
 
-void Cell::setOccupant(Bug newBug){
+Bug Cell::getOccupant()
+{
+    return occupant;
+}
+
+void Cell::setOccupant(Bug newBug)
+{
     occupant = newBug;
 }
 
-int Cell::getFood(){
+int Cell::getFood()
+{
     return food;
 }
 
-void Cell::setFood(int newFood){
+void Cell::setFood(int newFood)
+{
     food = newFood;
 }
 
-bool Cell::getObstructed(){
+bool Cell::getObstructed()
+{
     return obstructed;
 }
 
-bool Cell::isBlackHomeArea(){
+bool Cell::isBlackHomeArea()
+{
     return homeBlackBug;
 }
 
-bool Cell::isRedHomeArea(){
+bool Cell::isRedHomeArea()
+{
     return homeRedBug;
 }
