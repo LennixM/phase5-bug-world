@@ -1,6 +1,9 @@
 #ifndef PROGRAM_H
 #define PROGRAM_H
 
+#include "Bug.h"
+#include <iostream>
+
 class Program 
 {
 private:

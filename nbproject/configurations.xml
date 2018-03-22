@@ -31,6 +31,10 @@
                    projectFiles="true">
       <itemPath>Bug.cpp</itemPath>
       <itemPath>Cell.cpp</itemPath>
+      <itemPath>Instruction_direction.cpp</itemPath>
+      <itemPath>Instruction_move.cpp</itemPath>
+      <itemPath>Instruction_pickup.cpp</itemPath>
+      <itemPath>Instruction_sense.cpp</itemPath>
       <itemPath>Marker.cpp</itemPath>
       <itemPath>Program.cpp</itemPath>
       <itemPath>World.cpp</itemPath>
@@ -77,6 +81,7 @@
         <linkerTool>
           <linkerDynSerch>
             <pElem>.</pElem>
+            <pElem>.</pElem>
           </linkerDynSerch>
         </linkerTool>
       </compileType>
@@ -92,6 +97,8 @@
       </item>
       <item path="Instruction.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Instruction_direction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Instruction_direction.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Instruction_drop.h" ex="false" tool="3" flavor2="0">
@@ -100,9 +107,15 @@
       </item>
       <item path="Instruction_mark.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Instruction_move.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Instruction_move.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Instruction_pickup.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Instruction_pickup.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_sense.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Instruction_sense.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -128,6 +141,7 @@
         <linkerTool>
           <linkerDynSerch>
             <pElem>.</pElem>
+            <pElem>.</pElem>
           </linkerDynSerch>
         </linkerTool>
       </folder>
@@ -141,6 +155,7 @@
         <linkerTool>
           <output>${TESTDIR}/TestFiles/f1</output>
           <linkerDynSerch>
+            <pElem>.</pElem>
             <pElem>.</pElem>
           </linkerDynSerch>
           <linkerLibItems>
@@ -158,6 +173,7 @@
         <linkerTool>
           <output>${TESTDIR}/TestFiles/f2</output>
           <linkerDynSerch>
+            <pElem>.</pElem>
             <pElem>.</pElem>
           </linkerDynSerch>
           <linkerLibItems>
@@ -202,6 +218,7 @@
         <linkerTool>
           <linkerDynSerch>
             <pElem>.</pElem>
+            <pElem>.</pElem>
           </linkerDynSerch>
         </linkerTool>
       </compileType>
@@ -217,6 +234,8 @@
       </item>
       <item path="Instruction.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Instruction_direction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Instruction_direction.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Instruction_drop.h" ex="false" tool="3" flavor2="0">
@@ -225,9 +244,15 @@
       </item>
       <item path="Instruction_mark.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Instruction_move.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Instruction_move.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Instruction_pickup.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Instruction_pickup.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_sense.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Instruction_sense.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -253,6 +278,7 @@
         <linkerTool>
           <linkerDynSerch>
             <pElem>.</pElem>
+            <pElem>.</pElem>
           </linkerDynSerch>
         </linkerTool>
       </folder>
@@ -266,6 +292,7 @@
         <linkerTool>
           <output>${TESTDIR}/TestFiles/f1</output>
           <linkerDynSerch>
+            <pElem>.</pElem>
             <pElem>.</pElem>
           </linkerDynSerch>
           <linkerLibItems>
@@ -283,6 +310,7 @@
         <linkerTool>
           <output>${TESTDIR}/TestFiles/f2</output>
           <linkerDynSerch>
+            <pElem>.</pElem>
             <pElem>.</pElem>
           </linkerDynSerch>
           <linkerLibItems>

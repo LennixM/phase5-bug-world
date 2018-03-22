@@ -37,6 +37,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Bug.o \
 	${OBJECTDIR}/Cell.o \
+	${OBJECTDIR}/Instruction_direction.o \
+	${OBJECTDIR}/Instruction_move.o \
+	${OBJECTDIR}/Instruction_pickup.o \
+	${OBJECTDIR}/Instruction_sense.o \
 	${OBJECTDIR}/Marker.o \
 	${OBJECTDIR}/Program.o \
 	${OBJECTDIR}/World.o \
@@ -90,6 +94,26 @@ ${OBJECTDIR}/Cell.o: Cell.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Cell.o Cell.cpp
+
+${OBJECTDIR}/Instruction_direction.o: Instruction_direction.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Instruction_direction.o Instruction_direction.cpp
+
+${OBJECTDIR}/Instruction_move.o: Instruction_move.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Instruction_move.o Instruction_move.cpp
+
+${OBJECTDIR}/Instruction_pickup.o: Instruction_pickup.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Instruction_pickup.o Instruction_pickup.cpp
+
+${OBJECTDIR}/Instruction_sense.o: Instruction_sense.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Instruction_sense.o Instruction_sense.cpp
 
 ${OBJECTDIR}/Marker.o: Marker.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -175,6 +199,58 @@ ${OBJECTDIR}/Cell_nomain.o: ${OBJECTDIR}/Cell.o Cell.cpp
 	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Cell_nomain.o Cell.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Cell.o ${OBJECTDIR}/Cell_nomain.o;\
+	fi
+
+${OBJECTDIR}/Instruction_direction_nomain.o: ${OBJECTDIR}/Instruction_direction.o Instruction_direction.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/Instruction_direction.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Instruction_direction_nomain.o Instruction_direction.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/Instruction_direction.o ${OBJECTDIR}/Instruction_direction_nomain.o;\
+	fi
+
+${OBJECTDIR}/Instruction_move_nomain.o: ${OBJECTDIR}/Instruction_move.o Instruction_move.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/Instruction_move.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Instruction_move_nomain.o Instruction_move.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/Instruction_move.o ${OBJECTDIR}/Instruction_move_nomain.o;\
+	fi
+
+${OBJECTDIR}/Instruction_pickup_nomain.o: ${OBJECTDIR}/Instruction_pickup.o Instruction_pickup.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/Instruction_pickup.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Instruction_pickup_nomain.o Instruction_pickup.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/Instruction_pickup.o ${OBJECTDIR}/Instruction_pickup_nomain.o;\
+	fi
+
+${OBJECTDIR}/Instruction_sense_nomain.o: ${OBJECTDIR}/Instruction_sense.o Instruction_sense.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/Instruction_sense.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Instruction_sense_nomain.o Instruction_sense.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/Instruction_sense.o ${OBJECTDIR}/Instruction_sense_nomain.o;\
 	fi
 
 ${OBJECTDIR}/Marker_nomain.o: ${OBJECTDIR}/Marker.o Marker.cpp 
