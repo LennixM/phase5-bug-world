@@ -24,16 +24,15 @@ private:
     /* number of rounds the bug still has to rest */
     int remaining_rest;
     /* amount of food the bug is carrying */
-    int food;
+    bool food;
     /* Boolean whether or not the bug is dead */
     bool dead;
 public:
     
     /*
      * Default Bug constructor.
-     * Not needed or used.
      */
-//    Bug();
+    Bug();
     
     /*
      * Constructor for the bug
@@ -126,4 +125,4 @@ public:
     void kill();
 };
 
-#endif /* BUG_H */
+#endif
