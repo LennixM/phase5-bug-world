@@ -7,16 +7,32 @@
 
 using namespace std;
 
-Bug::Bug()
+Bug::Bug() 
 {
-    
+    this->color = tcolor();
+    this->prog_id = -1;
+    this->resting = -1;    
+    this->state = tstate();
+    this->position = tposition();
+    this->direction = tdirection();
+    this->remaining_rest = -1;
+    this->food = false;
+    this->dead = false;
 }
 
 Bug::Bug(tcolor i_col, int i_progid, int i_resting)
 {
-    tcolor = i_col;
-    prog_id = i_progid;
-    resting = i_resting;
+    /* given arguments */
+    this->color = i_col;
+    this->prog_id = i_progid;
+    this->resting = i_resting;
+    /* uninitialized fields */
+    this->state = tstate();
+    this->position = tposition();
+    this->direction = tdirection();
+    this->remaining_rest = -1;
+    this->food = false;
+    this->dead = false;
 }
 
 void Bug::start_resting()
@@ -97,39 +113,3 @@ void Bug::kill()
 {
     dead = true;
 }
-
-/*
- class Bug{
-private:
-    tcolor color;
-    tstate state;
-    int prog_id;
-    tposition position;
-    tdirection direction;
-    int resting;
-    int remaining_rest;
-    bool food;
-    bool dead;
-
-public:
-    Bug();
-    Bug(tcolor i_col, int i_progid, int i_resting);
-    
-    void start_resting();
-    bool rested();
-    int get_progid();
-    tcolor get_color();
-    tstate get_state();
-    void set_state(tstate new_state);
-    tdirection get_direction();
-    void set_direction(tdirection new_direction);
-    tposition get_position();
-    void set_position(tposition new_position);
-    bool get_food();
-    void set_food(bool new_food);
-    bool is_dead();
-    void kill();
-};
-
-#endif /* BUG_H */
- */

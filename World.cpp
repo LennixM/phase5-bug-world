@@ -23,8 +23,10 @@ Cell World::getCell(tposition pos){
 }
 
 tposition World::adjacent(tposition pos, tdirection dir){
-    //Returns adjacent cell, with respect to direction
-    //If no such cell exists, returns pos
+    /*
+     * Returns adjacent cell, with respect to direction.
+     * If no such cell exists, return original position.
+     */
     switch(dir.direction){
         case 0:
             if(pos.posX < width-1)
@@ -73,7 +75,7 @@ tcolor World::otherColor(tcolor color){
 }
 
 tcolor World::winner(){
-    return (redFood()>blackFood()) ? tcolor(0) : tcolor(1);
+    return (redFood() > blackFood()) ? tcolor(0) : tcolor(1);
 }
 
 int World::redFood(){
