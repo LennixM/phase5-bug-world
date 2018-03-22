@@ -7,6 +7,16 @@
       <itemPath>Bug.h</itemPath>
       <itemPath>Cell.h</itemPath>
       <itemPath>Exception.h</itemPath>
+      <itemPath>Instruction.h</itemPath>
+      <itemPath>Instruction_direction.h</itemPath>
+      <itemPath>Instruction_drop.h</itemPath>
+      <itemPath>Instruction_flip.h</itemPath>
+      <itemPath>Instruction_mark.h</itemPath>
+      <itemPath>Instruction_move.h</itemPath>
+      <itemPath>Instruction_pickup.h</itemPath>
+      <itemPath>Instruction_sense.h</itemPath>
+      <itemPath>Instruction_turn.h</itemPath>
+      <itemPath>Instruction_unmark.h</itemPath>
       <itemPath>Marker.h</itemPath>
       <itemPath>Structs.h</itemPath>
       <itemPath>World.h</itemPath>
@@ -62,6 +72,11 @@
           <standard>8</standard>
           <commandlineTool>g++</commandlineTool>
         </ccTool>
+        <linkerTool>
+          <linkerDynSerch>
+            <pElem>.</pElem>
+          </linkerDynSerch>
+        </linkerTool>
       </compileType>
       <item path="Bug.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -73,6 +88,26 @@
       </item>
       <item path="Exception.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Instruction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_direction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_drop.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_flip.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_mark.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_move.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_pickup.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_sense.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_turn.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_unmark.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Marker.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Marker.h" ex="false" tool="3" flavor2="0">
@@ -83,6 +118,13 @@
       </item>
       <item path="World.h" ex="false" tool="3" flavor2="0">
       </item>
+      <folder path="TestFiles">
+        <linkerTool>
+          <linkerDynSerch>
+            <pElem>.</pElem>
+          </linkerDynSerch>
+        </linkerTool>
+      </folder>
       <folder path="TestFiles/f1">
         <cTool>
           <commandLine>`cppunit-config --cflags`</commandLine>
@@ -92,6 +134,9 @@
         </ccTool>
         <linkerTool>
           <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerDynSerch>
+            <pElem>.</pElem>
+          </linkerDynSerch>
           <linkerLibItems>
             <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
           </linkerLibItems>
@@ -106,6 +151,9 @@
         </ccTool>
         <linkerTool>
           <output>${TESTDIR}/TestFiles/f2</output>
+          <linkerDynSerch>
+            <pElem>.</pElem>
+          </linkerDynSerch>
           <linkerLibItems>
             <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
           </linkerLibItems>
@@ -145,6 +193,11 @@
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+        <linkerTool>
+          <linkerDynSerch>
+            <pElem>.</pElem>
+          </linkerDynSerch>
+        </linkerTool>
       </compileType>
       <item path="Bug.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -156,6 +209,26 @@
       </item>
       <item path="Exception.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Instruction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_direction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_drop.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_flip.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_mark.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_move.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_pickup.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_sense.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_turn.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Instruction_unmark.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Marker.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Marker.h" ex="false" tool="3" flavor2="0">
@@ -166,6 +239,13 @@
       </item>
       <item path="World.h" ex="false" tool="3" flavor2="0">
       </item>
+      <folder path="TestFiles">
+        <linkerTool>
+          <linkerDynSerch>
+            <pElem>.</pElem>
+          </linkerDynSerch>
+        </linkerTool>
+      </folder>
       <folder path="TestFiles/f1">
         <cTool>
           <commandLine>`cppunit-config --cflags`</commandLine>
@@ -175,6 +255,9 @@
         </ccTool>
         <linkerTool>
           <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerDynSerch>
+            <pElem>.</pElem>
+          </linkerDynSerch>
           <linkerLibItems>
             <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
           </linkerLibItems>
@@ -189,6 +272,9 @@
         </ccTool>
         <linkerTool>
           <output>${TESTDIR}/TestFiles/f2</output>
+          <linkerDynSerch>
+            <pElem>.</pElem>
+          </linkerDynSerch>
           <linkerLibItems>
             <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
           </linkerLibItems>
