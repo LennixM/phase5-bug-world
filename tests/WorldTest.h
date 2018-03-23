@@ -16,6 +16,17 @@
 
 #include <cppunit/extensions/HelperMacros.h>
 
+#include <cppunit/BriefTestProgressListener.h>
+#include <cppunit/CompilerOutputter.h>
+#include <cppunit/extensions/TestFactoryRegistry.h>
+#include <cppunit/TestResult.h>
+#include <cppunit/TestResultCollector.h>
+#include <cppunit/TestRunner.h>
+
+#include <cppunit/Test.h>
+#include <cppunit/TestFailure.h>
+#include <cppunit/portability/Stream.h>
+
 class WorldTest : public CPPUNIT_NS::TestFixture {
     CPPUNIT_TEST_SUITE(WorldTest);
 
