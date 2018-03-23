@@ -1,20 +1,8 @@
-// Phase 1 - Adam Touzani & Giorgi Kabanashvili
+//Phase 1 - Adam Touzani & Giorgi Kabanashvili
 
-+ Implemented World.h and World.cpp
-+ Implemented Cell.h and Cell.cpp
-- Preliminary Unit Testing for World.h and World.cpp based on CppUnit
-  /* Unit testing still requires modifications to run properly */
+Implemented World.h and World.cpp
+Implemented Cell.h and Cell.cpp
+Preliminary Unit Testing for World.h and World.cpp based on CppUnit
+* Unit testing still requires modifications to run properly * 
 
-+ Implemented Bug.h and Bug.cpp
-
-// Phase 2 - Steven Abreu, Giorgi Kabanashvili, Ali Hamza
-
-+ Improved Bug to compile properly
-+ Improved Cell to compile properly
-+ Improved World to compile properly
-  /* two functions incomplete bc of dependencies */
-+ Implemented Marker class
-+ Added header files for all instructions
-  /* abstract and sub classes */
-+ Implemented Program class
-  /* two functions incomplete bc of dependencies */
+Implemented Bug.h and Bug.cpp
