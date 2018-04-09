@@ -1,8 +1,8 @@
-//Phase 1 - Adam Touzani & Giorgi Kabanashvili
+Phase 3 Lennart Meyer, Shalom-David Anifowoshe, Giorgi Kabanashvili
 
-Implemented World.h and World.cpp
-Implemented Cell.h and Cell.cpp
-Preliminary Unit Testing for World.h and World.cpp based on CppUnit
-* Unit testing still requires modifications to run properly * 
-
-Implemented Bug.h and Bug.cpp
++ Merged and integrated three projects together
++ Fixed merging errors
++ Improved tests
++ Fixed World, Bug and Instructions class
++ Prepared project for first runs
++ Added Bug and Marker test classes
