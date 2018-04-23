@@ -1,8 +1,11 @@
-Phase 3 Lennart Meyer, Shalom-David Anifowoshe, Giorgi Kabanashvili
+Phase 4 Lennart Meyer, Tudor Maiereanu	
 
-+ Merged and integrated three projects together
++ Merged and integrated two projects together
 + Fixed merging errors
 + Improved tests
-+ Fixed World, Bug and Instructions class
++ Fixed World and Bug class
 + Prepared project for first runs
 + Added Bug and Marker test classes
++ implemented all the instruction classes
++ wrote the make-files needed
++ added more test casses
